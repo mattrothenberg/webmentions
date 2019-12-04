@@ -23,7 +23,13 @@ Assuming you've done so, this plugin gives to you a `{{ webmentions }}` tag that
 composer require mattrothenberg/webmentions
 ```
 
-## Usage
+## Demo 🚀
+
+The sky's the limit when it comes to how you present your Webmention data! Here's a demo of the [example Vue component found in this repo!](mention-list.vue). Beware the component assumes you have [Tailwind](https://tailwindcss.com/) and [`v-tooltip`](https://github.com/Akryum/v-tooltip) installed.
+
+<img alt="Demo" src="https://i.imgur.com/yKVuVsj.gif" width="600" />
+
+## Usage (Antlers)
 
 This addon exposes a new tag called `webmentions`. Use it as follows, making sure to pass a `url` parameter.
 
@@ -46,6 +52,21 @@ This addon exposes a new tag called `webmentions`. Use it as follows, making sur
   {{ /if }}
 {{/webmentions}}
 ```
+
+## Usage (Vue)
+
+If you want to pipe the mentions data to a Vue component, here's how.
+
+```html
+{{ webmentions url="https://sebastiandedeyne.com/"  }}
+  {{ if no_results }}
+    <p>No results.</p>
+  {{ else }}
+    <mention-list :mentions="{{ mentions | json | entities }}"></mention-list>
+  {{/if}}
+{{ /webmentions }}
+```
+
 
 ## Mentions Schema
 
