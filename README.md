@@ -2,6 +2,21 @@
 
 > A custom tag for Statamic v3
 
+## What is this?
+
+As per https://webmention.io/,
+
+> webmention.io is an open-source project and hosted service for receiving webmentions and pingbacks on behalf of your indieweb site.
+
+Which is a fancy way of saying after signing up for this service, you can easily add the following snippets to your website in order to collect mentions/pingbacks (be sure to replace `<username>` with your, well, username 😅.
+
+```
+<link rel="webmention" href="https://webmention.io/<username>/webmention" />
+<link rel="pingback" href="https://webmention.io/<username>/xmlrpc" />
+```
+
+Assuming you've done so, this plugin gives to you a `{{ webmentions }}` tag that you can use in your Statamic site to display those collected mentions and pingbacks!
+
 ## Installation
 
 ```
@@ -60,3 +75,7 @@ Learn more at [Webmention.io](https://webmention.io/)
   "wm-private": false
 }
 ```
+
+## Roadmap
+- [ ] Add fancy Vue component example
+- [ ] Expose method that talks to `https://webmention.io/api/count`, thereby getting a breakdown of the types of mentions.
