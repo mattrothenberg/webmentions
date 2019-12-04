@@ -1,0 +1,23 @@
+{
+  "name": "mattrothenberg/webmentions",
+  "type": "statamic-addon",
+  "autoload": {
+    "psr-4": {
+      "Mattrothenberg\\Webmentions\\": "src"
+    }
+  },
+  "extra": {
+    "statamic": {
+      "name": "Webmentions",
+      "description": "Webmentions addon"
+    },
+    "laravel": {
+      "providers": [
+        "Mattrothenberg\\Webmentions\\ServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  }
+}
