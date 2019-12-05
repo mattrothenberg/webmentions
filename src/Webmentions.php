@@ -21,7 +21,6 @@ class Webmentions extends \Statamic\Tags\Tags
             $json = json_decode($res->getBody(), true);
 
             $children = $json['children'];
-            $count = count($children);
 
             return $children ? ['mentions' => $children] : [];
         }
