@@ -98,5 +98,5 @@ Learn more at [Webmention.io](https://webmention.io/)
 ```
 
 ## Roadmap
-- [ ] Add fancy Vue component example
+- [x] Add fancy Vue component example
 - [ ] Expose method that talks to `https://webmention.io/api/count`, thereby getting a breakdown of the types of mentions.
